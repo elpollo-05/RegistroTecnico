@@ -22,10 +22,10 @@
                 color: black;
             }
 
-            .boton-rosado:hover {
-                background-color: #ff9999; /* Rosado más oscuro */
-                color: white;
-            }
+                .boton-rosado:hover {
+                    background-color: #ff9999; /* Rosado más oscuro */
+                    color: white;
+                }
 
             .form-select, .form-control {
                 border: 1px solid black;
@@ -48,10 +48,10 @@
                 border: 1px solid black;
             }
 
-            .btn-outline-primary:hover, .btn-outline-warning:hover, .btn-outline-danger:hover {
-                background-color: black;
-                color: white;
-            }
+                .btn-outline-primary:hover, .btn-outline-warning:hover, .btn-outline-danger:hover {
+                    background-color: black;
+                    color: white;
+                }
 
             .card-footer {
                 background-color: #ffcccc; /* Color rosado */
@@ -67,11 +67,11 @@
                 cursor: pointer;
             }
 
-            .icon-button img {
-                width: 20px;
-                height: 20px;
-                vertical-align: middle;
-            }
+                .icon-button img {
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: middle;
+                }
         </style>
 
         <div class="card-header text-center titulo-fondo-rosado-borde-negro">
@@ -96,7 +96,7 @@
                         <option value="Id">ID del Técnico</option>
                         <option value="Nombre">Nombre</option>
                         <option value="SueldoHora">Sueldo/Hora</option>
-                        <option value="TipoTecnico">Tipo de Técnico</option> <!-- New option added -->
+                        <option value="TipoTecnico">Tipo de Técnico</option>
                     </InputSelect>
                 </div>
                 <div class="col-4">
@@ -119,7 +119,7 @@
                     <tr>
                         <th>ID del Técnico</th>
                         <th>Nombres</th>
-                        <th>Tipo de Técnico</th> <!-- New column for TipoTecnico -->
+                        <th>Tipo de Técnico</th>
                         <th>Sueldo/Hora</th>
                         <th>Detalles</th>
                         <th>Modificar</th>
@@ -132,7 +132,7 @@
                         <tr>
                             <td>@tecnico.TecniCold</td>
                             <td>@tecnico.Nombre</td>
-                            <td>@tecnico.TipoTecnico</td> <!-- Display TipoTecnico -->
+                            <td>@tecnico.TipoTecnico</td>
                             <td>@tecnico.SueldoHora</td>
                             <td>
                                 <button type="button" class="icon-button" @onclick="()=> PantallaObservar(tecnico.TecniCold)">
@@ -199,7 +199,7 @@
                 ListaTecnicos = await tecnicoService.Listar(e => e.Nombre.ToLower().Contains(ValorFiltro.ToLower()));
             else if (Filtro == "SueldoHora" && double.TryParse(ValorFiltro, out double sueldoHora))
                 ListaTecnicos = await tecnicoService.Listar(e => e.SueldoHora == sueldoHora);
-            else if (Filtro == "TipoTecnico") // Filtering by TipoTecnico
+            else if (Filtro == "TipoTecnico")
                 ListaTecnicos = await tecnicoService.Listar(e => e.TipoTecnico.ToLower().Contains(ValorFiltro.ToLower()));
         }
         else
@@ -215,4 +215,5 @@
         ValorFiltro = string.Empty;
     }
 }
+
 
