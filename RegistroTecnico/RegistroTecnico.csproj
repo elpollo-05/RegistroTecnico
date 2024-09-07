@@ -6,4 +6,33 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Components\Pages\TiposTecnicosPage\**" />
+    <Content Remove="Components\Pages\TiposTecnicosPage\**" />
+    <EmbeddedResource Remove="Components\Pages\TiposTecnicosPage\**" />
+    <None Remove="Components\Pages\TiposTecnicosPage\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Components\Pages\Index.cs" />
+    <Compile Remove="Components\Pages\TecnicosPage\Create.cs" />
+    <Compile Remove="Models\TiposTecnicos.cs" />
+    <Compile Remove="Services\TiposTecnicoservice.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 </Project>
