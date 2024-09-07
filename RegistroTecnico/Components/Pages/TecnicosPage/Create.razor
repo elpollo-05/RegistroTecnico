@@ -38,6 +38,17 @@
             <InputText @bind-Value="tecnico.Nombre" class="form-control" />
         </div>
 
+        @* Tipo de técnico *@
+        <div class="mb-3">
+            <label for="tipoTecnico" class="form-label">Seleccione el tipo de técnico:</label>
+            <InputSelect @bind-Value="tecnico.TipoTecnico" class="form-control">
+                <option value="">Elija una opción</option>
+                <option value="Programador">Programador</option>
+                <option value="Impresora">Impresora</option>
+                <option value="Redes">Redes</option>
+            </InputSelect>
+        </div>
+
     </div>
 
     <div class="card-footer bg-light d-flex justify-content-center mt-3">
@@ -102,5 +113,5 @@
         var eliminado = await tecnicoService.ELiminar(tecnico.TecniCold);
         Nuevo();
     }
-
 }
+

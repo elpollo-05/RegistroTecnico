@@ -11,4 +11,6 @@ namespace RegistroTecnico.Models;
         public string? Nombre { get; set; }
         [Required]
         public double SueldoHora { get; set; }
+        [Required]
+        public string TipoTecnico { get; set; }
 }
