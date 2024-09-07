@@ -6,8 +6,8 @@ namespace RegistroTecnico.Models
     public class Tecnicos
     {
         [Key]
-        public int tecniCold { get; set; }
-        public string? nombre { get; set; }
-        public double sueldoHora { get; set; }
+        public int TecniCold { get; set; }
+        public string? Nombre { get; set; }
+        public double SueldoHora { get; set; }
     }
 }

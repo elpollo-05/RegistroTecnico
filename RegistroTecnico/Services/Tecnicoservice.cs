@@ -15,7 +15,7 @@ namespace RegistroTecnico.Services
         public async Task<bool> Existe(String nombre)
         {
             return await _Contexto.Tecnicos
-              .AnyAsync(T => T.nombre == nombre);
+              .AnyAsync(T => T.Nombre == nombre);
         }
 
         public async Task<bool> Insertar(Tecnicos tecnicos)
@@ -32,7 +32,7 @@ namespace RegistroTecnico.Services
         public async Task<bool> Guardar(Tecnicos tecnicos)
         {
             //Busca la prioridad, si no existe la inserta, si existe la modifica
-            if (!await Existe(tecnicos.nombre))
+            if (!await Existe(tecnicos.Nombre))
                 return await Insertar(tecnicos);
             else
                 return await Modificar(tecnicos);
@@ -40,14 +40,14 @@ namespace RegistroTecnico.Services
         public async Task<bool> ELiminar(int tecniCold)
         {
             var tecnicos = await _Contexto.Tecnicos.
-              Where(P => P.tecniCold == tecniCold).ExecuteDeleteAsync();
+              Where(P => P.TecniCold == tecniCold).ExecuteDeleteAsync();
             return tecnicos > 0;
         }
         public async Task<Tecnicos?> Buscar(int tecniCold)
         {
             return await _Contexto.Tecnicos.
               AsNoTracking()
-             .FirstOrDefaultAsync(T => T.tecniCold == tecniCold);
+             .FirstOrDefaultAsync(T => T.TecniCold == tecniCold);
 
         }
 

@@ -1,5 +1,5 @@
 ﻿@page "/Tecnicos/Delete"
-@page "/Tecnicos/Delete/{tecniCold:int}"
+@page "/Tecnicos/Delete/{TecniCold:int}"
 @inject Tecnicoservice tecnicoService
 @inject NavigationManager navigationManager
 @rendermode InteractiveServer
@@ -19,13 +19,13 @@
             <div class="card-body">
                 <h5><strong>¿Estás seguro de que quieres eliminar este técnico?</strong></h5>
                 <div class="mb-1">
-                    <p class="mb-0">TécnicoId: @tecnico.tecniCold</p>
+                    <p class="mb-0">TécnicoId: @tecnico.TecniCold</p>
                 </div>
                 <div class="mb-1">
-                    <p class="mb-0">Nombres: @tecnico.nombre</p>
+                    <p class="mb-0">Nombres: @tecnico.Nombre</p>
                 </div>
                 <div class="mb-1">
-                    <p class="mb-0">Sueldo por hora: @tecnico.sueldoHora</p>
+                    <p class="mb-0">Sueldo por hora: @tecnico.SueldoHora</p>
                 </div>
             </div>
             @*Footer*@

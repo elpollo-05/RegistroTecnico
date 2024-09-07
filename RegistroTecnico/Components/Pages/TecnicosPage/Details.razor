@@ -1,5 +1,5 @@
 ﻿@page "/Tecnicos/Details"
-@page "/Tecnicos/Details/{tecniCold:int}"
+@page "/Tecnicos/Details/{TecniCold:int}"
 @inject Tecnicoservice TecnicoService
 @inject NavigationManager navigationManager
 @rendermode InteractiveServer
@@ -15,9 +15,9 @@
             </div>
             <div class="card-body">
                 <ul class="list-unstyled">
-                    <li><strong>ID del Técnico:</strong> @tecnico.tecniCold</li>
-                    <li><strong>Nombre Completo:</strong> @tecnico.nombre</li>
-                    <li><strong>Tarifa Horaria:</strong> @tecnico.sueldoHora</li>
+                    <li><strong>ID del Técnico:</strong> @tecnico.TecniCold</li>
+                    <li><strong>Nombre Completo:</strong> @tecnico.Nombre</li>
+                    <li><strong>Tarifa Horaria:</strong> @tecnico.SueldoHora</li>
                 </ul>
             </div>
             <div class="card-footer text-center">

@@ -130,21 +130,21 @@
                     @foreach (var tecnico in ListaTecnicos)
                     {
                         <tr>
-                            <td>@tecnico.tecniCold</td>
-                            <td>@tecnico.nombre</td>
-                            <td>@tecnico.sueldoHora</td>
+                            <td>@tecnico.TecniCold</td>
+                            <td>@tecnico.Nombre</td>
+                            <td>@tecnico.SueldoHora</td>
                             <td>
-                                <button type="button" class="icon-button" @onclick="()=> PantallaObservar(tecnico.tecniCold)">
+                                <button type="button" class="icon-button" @onclick="()=> PantallaObservar(tecnico.TecniCold)">
                                     <img src="images/eye-icon.png" alt="Detalles" />
                                 </button>
                             </td>
                             <td>
-                                <button type="button" class="icon-button" @onclick="()=> PantallaEditar(tecnico.tecniCold)">
+                                <button type="button" class="icon-button" @onclick="()=> PantallaEditar(tecnico.TecniCold)">
                                     <img src="images/edit-icon.png" alt="Modificar" />
                                 </button>
                             </td>
                             <td>
-                                <button type="button" class="icon-button" @onclick="()=> PantallaEliminar(tecnico.tecniCold)">
+                                <button type="button" class="icon-button" @onclick="()=> PantallaEliminar(tecnico.TecniCold)">
                                     <img src="images/delete-icon.png" alt="Eliminar" />
                                 </button>
                             </td>
@@ -168,7 +168,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        ListaTecnicos = await tecnicoService.Listar(e => e.tecniCold > 0);
+        ListaTecnicos = await tecnicoService.Listar(e => e.TecniCold > 0);
     }
 
     public void PantallaCrear() => navigationManager.NavigateTo("/Tecnicos/Create");
@@ -193,24 +193,24 @@
         if (ValorFiltro.Trim() != "")
         {
             if (Filtro == "Id" && int.TryParse(ValorFiltro, out int tecniCold))
-                ListaTecnicos = await tecnicoService.Listar(e => e.tecniCold == tecniCold);
+                ListaTecnicos = await tecnicoService.Listar(e => e.TecniCold == tecniCold);
             else if (Filtro == "Nombre")
-                ListaTecnicos = await tecnicoService.Listar(e => e.nombre.ToLower().Contains(ValorFiltro.ToLower()));
+                ListaTecnicos = await tecnicoService.Listar(e => e.Nombre.ToLower().Contains(ValorFiltro.ToLower()));
             else if (Filtro == "SueldoHora")
             {
                 if (double.TryParse(ValorFiltro, out double sueldoHora))
                 {
-                    ListaTecnicos = await tecnicoService.Listar(e => e.sueldoHora == sueldoHora);
+                    ListaTecnicos = await tecnicoService.Listar(e => e.SueldoHora == sueldoHora);
                 }
             }
         }
         else
-            ListaTecnicos = await tecnicoService.Listar(e => e.tecniCold > 0);
+            ListaTecnicos = await tecnicoService.Listar(e => e.TecniCold > 0);
     }
 
     private async Task Restablecer()
     {
-        ListaTecnicos = await tecnicoService.Listar(e => e.tecniCold > 0);
+        ListaTecnicos = await tecnicoService.Listar(e => e.TecniCold > 0);
         Filtro = string.Empty;
         ValorFiltro = string.Empty;
     }

@@ -21,17 +21,17 @@ namespace RegistroTecnico.Migrations
 
             modelBuilder.Entity("RegistroTecnico.Models.Tecnicos", b =>
                 {
-                    b.Property<int>("tecniCold")
+                    b.Property<int>("TecniCold")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("nombre")
+                    b.Property<string>("Nombre")
                         .HasColumnType("TEXT");
 
-                    b.Property<double>("sueldoHora")
+                    b.Property<double>("SueldoHora")
                         .HasColumnType("REAL");
 
-                    b.HasKey("tecniCold");
+                    b.HasKey("TecniCold");
 
                     b.ToTable("Tecnicos");
                 });
