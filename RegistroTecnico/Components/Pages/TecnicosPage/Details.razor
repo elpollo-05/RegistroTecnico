@@ -10,7 +10,8 @@
 {
     <div class="container mt-4">
         <div class="card shadow-lg rounded">
-            <div class="card-header titulo-fondo-rosado-borde-negro">
+            <!-- Aquí aplicamos la clase detalles-header -->
+            <div class="card-header detalles-header">
                 <h3 class="text-center"><strong>Detalles del Técnico</strong></h3>
             </div>
             <div class="card-body">
@@ -18,12 +19,12 @@
                     <li><strong>ID del Técnico:</strong> @tecnico.TecniCold</li>
                     <li><strong>Nombre Completo:</strong> @tecnico.Nombre</li>
                     <li><strong>Tarifa Horaria:</strong> @tecnico.SueldoHora</li>
-                    <li><strong>Tipo de Técnico:</strong> @tecnico.TipoTecnico</li> <!-- Agregado -->
+                    <li><strong>Tipo de Técnico:</strong> @tecnico.TipoTecnico</li>
                 </ul>
             </div>
-            <div class="card-footer text-center">
-                <button type="button" class="btn btn-outline-primary" @onclick="Volver">
-                    <i class="bi bi-box-arrow-left"></i> Volver
+            <div class="card-footer bg-light d-flex justify-content-start">
+                <button type="button" class="btn btn-outline-secondary" @onclick="Volver">
+                    <i class="bi bi-box-arrow-left"></i> Retroceder
                 </button>
             </div>
         </div>
@@ -49,3 +50,19 @@ else
         navigationManager.NavigateTo("/Tecnicos/Index");
     }
 }
+
+<style>
+    .detalles-header {
+        background-color: blue; /* Fondo azul */
+        color: white; /* Letras blancas */
+        border-top: 2px solid blue; /* Borde superior azul */
+        border-bottom: 2px solid blue; /* Borde inferior azul */
+    }
+</style>
+
+
+
+
+
+
+

@@ -6,7 +6,7 @@
 <PageTitle>Registro de Técnicos</PageTitle>
 
 <div class="container mt-4">
-    <div class="shadow-lg rounded">
+    <div class="card shadow-lg rounded">
         <style>
             .titulo-fondo-rosado-borde-negro {
                 background-color: #ffcccc; /* Color rosado */
@@ -22,10 +22,10 @@
                 color: black;
             }
 
-                .boton-rosado:hover {
-                    background-color: #ff9999; /* Rosado más oscuro */
-                    color: white;
-                }
+            .boton-rosado:hover {
+                background-color: #ff9999; /* Rosado más oscuro */
+                color: white;
+            }
 
             .form-select, .form-control {
                 border: 1px solid black;
@@ -48,10 +48,10 @@
                 border: 1px solid black;
             }
 
-                .btn-outline-primary:hover, .btn-outline-warning:hover, .btn-outline-danger:hover {
-                    background-color: black;
-                    color: white;
-                }
+            .btn-outline-primary:hover, .btn-outline-warning:hover, .btn-outline-danger:hover {
+                background-color: black;
+                color: white;
+            }
 
             .card-footer {
                 background-color: #ffcccc; /* Color rosado */
@@ -67,11 +67,11 @@
                 cursor: pointer;
             }
 
-                .icon-button img {
-                    width: 20px;
-                    height: 20px;
-                    vertical-align: middle;
-                }
+            .icon-button img {
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+            }
         </style>
 
         <div class="card-header text-center titulo-fondo-rosado-borde-negro">
@@ -79,7 +79,6 @@
         </div>
 
         <div class="card-body">
-
             <div class="row">
                 <div class="col-3">
                     <label class="col-form-label"><strong>Filtrar por</strong></label>
@@ -108,7 +107,7 @@
                     </div>
                 </div>
                 <div class="col-3 offset-2">
-                    <button type="button" class="btn btn-primary boton-rosado" @onclick="PantallaCrear">
+                    <button type="button" class="btn boton-rosado" @onclick="PantallaCrear">
                         Crear
                     </button>
                 </div>
@@ -215,5 +214,6 @@
         ValorFiltro = string.Empty;
     }
 }
+
 
 
